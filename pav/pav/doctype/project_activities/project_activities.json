@@ -1,0 +1,208 @@
+{
+ "allow_rename": 1,
+ "autoname": "format:{project_activity_code}",
+ "creation": "2020-07-08 02:20:49.312769",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "project_activity",
+  "project",
+  "customer",
+  "parent_project_activities",
+  "project_activity_category",
+  "column_break_4",
+  "project_activity_code",
+  "is_group",
+  "disabled",
+  "more_information_section_section",
+  "description",
+  "section_break_12",
+  "project_activity_payroll",
+  "project_activity_salary_component",
+  "lft",
+  "rgt",
+  "old_parent"
+ ],
+ "fields": [
+  {
+   "fieldname": "project_activity",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Project Activity",
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Project",
+   "options": "Project",
+   "reqd": 1
+  },
+  {
+   "fieldname": "column_break_4",
+   "fieldtype": "Column Break"
+  },
+  {
+   "description": "Should to be Number",
+   "fieldname": "project_activity_code",
+   "fieldtype": "Data",
+   "label": "Project Activity Code",
+   "reqd": 1,
+   "set_only_once": 1
+  },
+  {
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "label": "Description"
+  },
+  {
+   "fieldname": "lft",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Left",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "rgt",
+   "fieldtype": "Int",
+   "hidden": 1,
+   "label": "Right",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "fieldname": "is_group",
+   "fieldtype": "Check",
+   "label": "Is Group"
+  },
+  {
+   "fieldname": "old_parent",
+   "fieldtype": "Link",
+   "hidden": 1,
+   "label": "Old Parent",
+   "options": "Project Activities",
+   "read_only": 1
+  },
+  {
+   "fieldname": "parent_project_activities",
+   "fieldtype": "Link",
+   "label": "Parent Project Activities",
+   "options": "Project Activities"
+  },
+  {
+   "collapsible": 1,
+   "fieldname": "more_information_section_section",
+   "fieldtype": "Section Break",
+   "label": "More Information"
+  },
+  {
+   "default": "0",
+   "fieldname": "disabled",
+   "fieldtype": "Check",
+   "label": "Disabled"
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": ".project.-.project_activity_code."
+  },
+  {
+   "collapsible": 1,
+   "depends_on": "eval:doc.project_activity_category=='Payroll'",
+   "fieldname": "section_break_12",
+   "fieldtype": "Section Break",
+   "label": "Payroll Details"
+  },
+  {
+   "fieldname": "project_activity_payroll",
+   "fieldtype": "Table",
+   "label": "Project Activity Payroll",
+   "options": "Project Activity Payroll",
+   "permlevel": 1
+  },
+  {
+   "fieldname": "project_activity_category",
+   "fieldtype": "Select",
+   "label": "Project Activity Category",
+   "options": "\nPayroll"
+  },
+  {
+   "fieldname": "project_activity_salary_component",
+   "fieldtype": "Table",
+   "label": "Project Activity Salary Component",
+   "options": "Project Activity Salary Component"
+  },
+  {
+   "fetch_from": "project.customer",
+   "fieldname": "customer",
+   "fieldtype": "Link",
+   "label": "Funder",
+   "options": "Customer",
+   "read_only": 1,
+   "reqd": 1
+  }
+ ],
+ "is_tree": 1,
+ "modified": "2020-11-26 09:32:42.146477",
+ "modified_by": "a.kuhlani@partner-cons.com",
+ "module": "PAV",
+ "name": "Project Activities",
+ "nsm_parent_field": "parent_project_activities",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts Manager",
+   "share": 1,
+   "write": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Accounts User",
+   "share": 1
+  },
+  {
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "Projects Manager",
+   "share": 1
+  }
+ ],
+ "quick_entry": 1,
+ "search_fields": "project_activity,project,project_activity_code",
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "project_activity",
+ "track_changes": 1
+}

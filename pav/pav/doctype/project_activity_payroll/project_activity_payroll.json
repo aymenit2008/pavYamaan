@@ -1,0 +1,84 @@
+{
+ "creation": "2020-08-29 20:16:33.174948",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "employee",
+  "employee_name",
+  "designation",
+  "cost_center",
+  "project_percentage",
+  "status"
+ ],
+ "fields": [
+  {
+   "columns": 2,
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "permlevel": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "project_percentage",
+   "fieldtype": "Percent",
+   "in_list_view": 1,
+   "label": "Project Percentage",
+   "permlevel": 1
+  },
+  {
+   "columns": 1,
+   "fieldname": "status",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Status",
+   "options": "Active\nInactive",
+   "permlevel": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "in_list_view": 1,
+   "label": "Employee Name",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fetch_from": "employee.designation",
+   "fieldname": "designation",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Designation",
+   "options": "Designation",
+   "permlevel": 1,
+   "read_only": 1
+  },
+  {
+   "columns": 2,
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Cost Center",
+   "options": "Cost Center",
+   "permlevel": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-11-26 09:31:17.001265",
+ "modified_by": "a.kuhlani@partner-cons.com",
+ "module": "PAV",
+ "name": "Project Activity Payroll",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

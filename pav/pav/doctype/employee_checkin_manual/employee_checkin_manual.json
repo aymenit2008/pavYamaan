@@ -1,0 +1,117 @@
+{
+ "allow_copy": 1,
+ "autoname": "naming_series:",
+ "creation": "2020-08-30 11:14:02.992560",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "naming_series",
+  "employee",
+  "employee_name",
+  "checkin_approver",
+  "column_break_5",
+  "log_type",
+  "time",
+  "device_id",
+  "approval_status",
+  "amended_from"
+ ],
+ "fields": [
+  {
+   "fieldname": "employee",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Employee",
+   "options": "Employee",
+   "reqd": 1
+  },
+  {
+   "fetch_from": "employee.employee_name",
+   "fieldname": "employee_name",
+   "fieldtype": "Data",
+   "label": "Employee Name",
+   "read_only": 1
+  },
+  {
+   "fieldname": "log_type",
+   "fieldtype": "Select",
+   "in_list_view": 1,
+   "label": "Log Type",
+   "options": "\nIN\nOUT",
+   "reqd": 1
+  },
+  {
+   "fieldname": "time",
+   "fieldtype": "Datetime",
+   "label": "Time",
+   "no_copy": 1,
+   "read_only": 1
+  },
+  {
+   "fieldname": "amended_from",
+   "fieldtype": "Link",
+   "label": "Amended From",
+   "no_copy": 1,
+   "options": "Employee Checkin Manual",
+   "print_hide": 1,
+   "read_only": 1
+  },
+  {
+   "default": "100",
+   "fieldname": "device_id",
+   "fieldtype": "Data",
+   "label": "Location / Device ID",
+   "read_only": 1
+  },
+  {
+   "fieldname": "naming_series",
+   "fieldtype": "Select",
+   "label": "Naming Series",
+   "options": "EMP-CKINM-.MM.-.YYYY.-"
+  },
+  {
+   "fieldname": "checkin_approver",
+   "fieldtype": "Link",
+   "label": "Checkin Approver",
+   "options": "User"
+  },
+  {
+   "fieldname": "column_break_5",
+   "fieldtype": "Column Break"
+  },
+  {
+   "allow_on_submit": 1,
+   "default": "Open",
+   "fieldname": "approval_status",
+   "fieldtype": "Data",
+   "label": "Approval Status",
+   "options": "\nOpen\nApproved\nRejected\nCancelled",
+   "read_only": 1
+  }
+ ],
+ "is_submittable": 1,
+ "modified": "2020-09-30 11:04:16.485640",
+ "modified_by": "Administrator",
+ "module": "PAV",
+ "name": "Employee Checkin Manual",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "title_field": "employee_name",
+ "track_changes": 1
+}

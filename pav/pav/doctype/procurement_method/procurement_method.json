@@ -1,0 +1,65 @@
+{
+ "autoname": "field:procurement_method",
+ "creation": "2020-11-19 09:46:36.889037",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "procurement_method",
+  "works_max",
+  "works_min",
+  "goods_max",
+  "goods_min"
+ ],
+ "fields": [
+  {
+   "fieldname": "procurement_method",
+   "fieldtype": "Data",
+   "label": "Procurement Method",
+   "unique": 1
+  },
+  {
+   "fieldname": "works_max",
+   "fieldtype": "Float",
+   "label": "Works Max"
+  },
+  {
+   "fieldname": "works_min",
+   "fieldtype": "Float",
+   "label": "Works Min"
+  },
+  {
+   "fieldname": "goods_max",
+   "fieldtype": "Float",
+   "label": "Goods Max"
+  },
+  {
+   "fieldname": "goods_min",
+   "fieldtype": "Float",
+   "label": "Goods Min"
+  }
+ ],
+ "modified": "2020-11-19 09:46:47.115763",
+ "modified_by": "Administrator",
+ "module": "PAV",
+ "name": "Procurement Method",
+ "owner": "Administrator",
+ "permissions": [
+  {
+   "create": 1,
+   "delete": 1,
+   "email": 1,
+   "export": 1,
+   "print": 1,
+   "read": 1,
+   "report": 1,
+   "role": "System Manager",
+   "share": 1,
+   "write": 1
+  }
+ ],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

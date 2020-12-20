@@ -1,0 +1,30 @@
+{
+ "creation": "2020-08-29 20:25:34.700447",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "salary_component"
+ ],
+ "fields": [
+  {
+   "fieldname": "salary_component",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Salary Component",
+   "options": "Salary Component",
+   "reqd": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-08-29 20:25:34.700447",
+ "modified_by": "Administrator",
+ "module": "PAV",
+ "name": "Project Activity Salary Component",
+ "owner": "Administrator",
+ "permissions": [],
+ "quick_entry": 1,
+ "sort_field": "modified",
+ "sort_order": "DESC",
+ "track_changes": 1
+}

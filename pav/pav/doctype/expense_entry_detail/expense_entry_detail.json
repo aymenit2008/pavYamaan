@@ -1,0 +1,141 @@
+{
+ "creation": "2020-07-07 00:30:25.793414",
+ "doctype": "DocType",
+ "editable_grid": 1,
+ "engine": "InnoDB",
+ "field_order": [
+  "expense_type",
+  "default_account",
+  "account_currency",
+  "section_break_4",
+  "description",
+  "section_break_6",
+  "amount",
+  "account_amount",
+  "base_amount",
+  "column_break_8",
+  "accounting_dimensions_section",
+  "project",
+  "dimension_col_break",
+  "cost_center"
+ ],
+ "fields": [
+  {
+   "fieldname": "expense_type",
+   "fieldtype": "Link",
+   "in_list_view": 1,
+   "label": "Expense Claim Type",
+   "oldfieldname": "expense_type",
+   "oldfieldtype": "Link",
+   "options": "Expense Claim Type",
+   "print_width": "150px",
+   "reqd": 1,
+   "width": "150px"
+  },
+  {
+   "depends_on": "expense_type",
+   "fieldname": "default_account",
+   "fieldtype": "Link",
+   "ignore_user_permissions": 1,
+   "label": "Default Account",
+   "options": "Account",
+   "read_only": 1
+  },
+  {
+   "fieldname": "section_break_4",
+   "fieldtype": "Section Break"
+  },
+  {
+   "fetch_from": "expense_type.description",
+   "fetch_if_empty": 1,
+   "fieldname": "description",
+   "fieldtype": "Text Editor",
+   "in_list_view": 1,
+   "label": "Description",
+   "oldfieldname": "description",
+   "oldfieldtype": "Small Text",
+   "print_width": "300px",
+   "width": "300px"
+  },
+  {
+   "fieldname": "section_break_6",
+   "fieldtype": "Section Break"
+  },
+  {
+   "default": "0",
+   "description": "Payment Currency",
+   "fieldname": "amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount",
+   "oldfieldname": "claim_amount",
+   "oldfieldtype": "Currency",
+   "options": "payment_currency",
+   "print_width": "150px",
+   "reqd": 1,
+   "width": "150px"
+  },
+  {
+   "fieldname": "column_break_8",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fieldname": "accounting_dimensions_section",
+   "fieldtype": "Section Break",
+   "label": "Accounting Dimensions"
+  },
+  {
+   "fieldname": "cost_center",
+   "fieldtype": "Link",
+   "label": "Cost Center",
+   "options": "Cost Center"
+  },
+  {
+   "fieldname": "dimension_col_break",
+   "fieldtype": "Column Break"
+  },
+  {
+   "fetch_from": "default_account.account_currency",
+   "fieldname": "account_currency",
+   "fieldtype": "Link",
+   "label": "Account Currency",
+   "options": "Currency",
+   "read_only": 1
+  },
+  {
+   "default": "0",
+   "description": "Company Currency",
+   "fieldname": "base_amount",
+   "fieldtype": "Currency",
+   "in_list_view": 1,
+   "label": "Amount (Company Currency)",
+   "options": "default_currency",
+   "read_only": 1,
+   "reqd": 1
+  },
+  {
+   "fieldname": "project",
+   "fieldtype": "Link",
+   "label": "Project",
+   "options": "Project"
+  },
+  {
+   "default": "0",
+   "description": "Account Currency",
+   "fieldname": "account_amount",
+   "fieldtype": "Currency",
+   "label": "Amount (Account Currency)",
+   "options": "account_currency",
+   "read_only": 1
+  }
+ ],
+ "istable": 1,
+ "modified": "2020-09-14 08:00:57.257995",
+ "modified_by": "Administrator",
+ "module": "PAV",
+ "name": "Expense Entry Detail",
+ "owner": "Administrator",
+ "permissions": [],
+ "sort_field": "modified",
+ "sort_order": "DESC"
+}
